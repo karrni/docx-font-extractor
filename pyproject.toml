@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "docxfontext"
+version = "1.0.0"
+description = "Extract embedded fonts from .docx files"
+authors = ["karrni <24398546+karrni@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+docx-font-extractor = "docxfontext.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+black = "^23.9.1"
+ruff = "^0.0.291"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+output-format = "grouped"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
